@@ -6,7 +6,7 @@ class ScreenTransit < Formula
   license "MIT"
 
   depends_on :macos
-  depends_on :xcode => ["14.0", :build]
+  depends_on :xcode => :build
 
   def install
     version_swift = "// Auto-generated from VERSION — do not edit manually.\n" \
