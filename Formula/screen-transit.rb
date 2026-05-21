@@ -11,7 +11,7 @@ class ScreenTransit < Formula
   def install
     version_swift = "// Auto-generated from VERSION — do not edit manually.\n" \
                     "let appVersion = \"#{version}\"\n"
-    (buildpath/"Sources/screen-transit/Version.swift").write(version_swift)
+    (buildpath/"Sources/screen-transit/Version.swift").atomic_write(version_swift)
     system "swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/screen-transit"
   end
