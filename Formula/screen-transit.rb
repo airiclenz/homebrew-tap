@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "d5733798dcaf1f74ae7b29e07e04d64a8c2643b4748a1838809239255f33260f"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "1b05913c35ca50630cf20f1a93edddc516b2fb2262cac8ed10b5d44604d0e23b"
   license "MIT"
 
   depends_on :macos
@@ -19,9 +19,8 @@ class ScreenTransit < Formula
 
   def post_install
     cert_name = "Screen Transit Local"
-    keychain = "#{Dir.home}/Library/Keychains/login.keychain-db"
 
-    if system("security", "find-certificate", "-c", cert_name, keychain, [:out, :err] => "/dev/null")
+    if system("security", "find-certificate", "-c", cert_name, "-a", [:out, :err] => "/dev/null")
       system bin/"setup-signing.sh", bin/"screen-transit"
     else
       puts
