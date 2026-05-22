@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "781f494beffef2a5742239f687fc20490a24e343fce314e4bcb18c7949d0b0a0"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "68b32d787c1f39a2588004089ee6d61aa318e69b42c698915de7ac23546fcda4"
   license "MIT"
 
   depends_on :macos
@@ -14,14 +14,14 @@ class ScreenTransit < Formula
     (buildpath/"Sources/screen-transit/Version.swift").atomic_write(version_swift)
     system "swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/screen-transit"
-    bin.install "setup-signing.sh"
+    bin.install "screen-transit-signing.sh"
   end
 
   def post_install
     cert_name = "Screen Transit Local"
 
     if system("security", "find-certificate", "-c", cert_name, "-a", [:out, :err] => "/dev/null")
-      system bin/"setup-signing.sh", bin/"screen-transit"
+      system bin/"screen-transit-signing.sh", bin/"screen-transit"
     else
       puts
       opoo <<~EOS
@@ -31,7 +31,7 @@ class ScreenTransit < Formula
       ohai <<~EOS
         Run this once to fix (will ask for your login keychain password):
 
-          setup-signing.sh #{opt_bin}/screen-transit
+          screen-transit-signing.sh #{opt_bin}/screen-transit
 
       EOS
     end
