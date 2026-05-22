@@ -31,7 +31,7 @@ class ScreenTransit < Formula
       ohai <<~EOS
         Run this once to fix (will ask for your login keychain password):
 
-          setup-signing.sh #{bin}/screen-transit
+          setup-signing.sh #{opt_bin}/screen-transit
 
       EOS
     end
