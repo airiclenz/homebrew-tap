@@ -20,7 +20,7 @@ class ScreenTransit < Formula
   def post_install
     cert_name = "Screen Transit Local"
 
-    if system("security", "find-certificate", "-c", cert_name, [:out, :err] => "/dev/null")
+    if quiet_system("security", "find-certificate", "-c", cert_name)
       system bin/"screen-transit-signing.sh", bin/"screen-transit"
     else
       puts
