@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "af6972a90783cc90e0e59a119bdb8c96b742615a1c1c3f0172abafe756a12feb"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "e10f4b40cbd9a72b4881699f098934a05ae2dd2bca4e16a535198534c08a6365"
   license "MIT"
 
   depends_on :macos
@@ -19,7 +19,10 @@ class ScreenTransit < Formula
 
   def post_install
     cert_name = "Screen Transit Local"
-    identities = `security find-identity -v -p codesigning 2>/dev/null`
+
+    system bin/"setup-signing.sh"
+
+    identities = `security find-identity -v 2>/dev/null`
     if identities.include?(cert_name)
       system "codesign", "-s", cert_name, "-f", bin/"screen-transit"
     else
@@ -58,14 +61,6 @@ class ScreenTransit < Formula
 
   def caveats
     <<~EOS
-      First-time install: run the signing setup so macOS permanently
-      remembers the Bluetooth permission (one password prompt):
-
-        setup-signing.sh
-        codesign -s "Screen Transit Local" -f #{bin}/screen-transit
-
-      Future upgrades re-sign automatically — no action needed.
-
       Create your config file before starting the service:
 
         mkdir -p ~/.config/screen-transit
