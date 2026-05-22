@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "341c2ebf4cade129b0ad69847e05b118bae97639fc845e23cd838e0214c39cd0"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "85d7b64c6c280996dbdddeab6d615f6a75119767e39bdaec7c1a2c3da7cec9d5"
   license "MIT"
 
   depends_on :macos
@@ -19,10 +19,8 @@ class ScreenTransit < Formula
 
   def post_install
     cert_name = "Screen Transit Local"
-
-    system bin/"setup-signing.sh"
-
     identities = `security find-identity -v 2>/dev/null`
+
     if identities.include?(cert_name)
       system "codesign", "-s", cert_name, "-f", bin/"screen-transit"
     else
@@ -32,7 +30,7 @@ class ScreenTransit < Formula
         Without it, macOS will prompt for Bluetooth permission on every launch.
       EOS
       ohai <<~EOS
-        Run this once to fix:
+        Run this once to fix (will ask for your login keychain password):
 
           setup-signing.sh && codesign -s "#{cert_name}" -f #{bin}/screen-transit
 
