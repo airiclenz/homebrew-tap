@@ -18,6 +18,49 @@ class ScreenTransit < Formula
   end
 
   def post_install
+    config_dir = Pathname.new("#{Dir.home}/.config/screen-transit")
+    config_file = config_dir/"config.yaml"
+
+    unless config_file.exist?
+      config_dir.mkpath
+      config_file.write <<~YAML
+        # screen-transit configuration
+        #
+        # Discovery commands:
+        #   blueutil --paired                     Find Bluetooth MAC address
+        #   system_profiler SPBluetoothDataType   Alternative for Bluetooth MAC
+        #   m1ddc display list                    Find display number
+        #   m1ddc get input                       Find current input code
+        #
+        # Common DDC/CI input codes (VCP 0x60) -- verify yours with m1ddc:
+        #   15 = DisplayPort-1    16 = DisplayPort-2
+        #   17 = USB-C             4 = HDMI-1         5 = HDMI-2
+        #
+        # Reload after editing:
+        #   brew services restart screen-transit
+
+        delay: 1.0
+
+        rules:
+          # Uncomment and edit the rules below.
+          #
+          # - name: "Keyboard connect -> DisplayPort"
+          #   source: bluetooth
+          #   device_id: "AA:BB:CC:DD:EE:FF"
+          #   display: 1
+          #   input: 15
+          #   trigger: connect
+          #
+          # - name: "Keyboard disconnect -> USB-C"
+          #   source: bluetooth
+          #   device_id: "AA:BB:CC:DD:EE:FF"
+          #   display: 1
+          #   input: 17
+          #   trigger: disconnect
+      YAML
+      ohai "Default config created at #{config_file}"
+    end
+
     cert_name = "Screen Transit Local"
 
     if quiet_system("security", "find-certificate", "-c", cert_name)
@@ -29,24 +72,15 @@ class ScreenTransit < Formula
         Without it, macOS will prompt for Bluetooth permission on every launch.
       EOS
       ohai <<~EOS
-        Run this once to fix (will ask for your login keychain password):
-
-          screen-transit-signing.sh #{opt_bin}/screen-transit
-
+        Run once to fix:  screen-transit-signing.sh #{opt_bin}/screen-transit
       EOS
     end
 
     puts
-    ohai <<~EOS
-      To run screen-transit as a background service:
-
-        brew services start screen-transit
-
-      To stop:
-
-        brew services stop screen-transit
-
-    EOS
+    ohai "Start/stop as a background service:"
+    puts "  brew services start screen-transit"
+    puts "  brew services stop screen-transit"
+    puts
   end
 
   service do
@@ -58,16 +92,11 @@ class ScreenTransit < Formula
 
   def caveats
     <<~EOS
-      Create your config file before starting the service:
+      Edit the config with your device values, then start the service:
 
-        mkdir -p ~/.config/screen-transit
-        screen-transit --help
+        #{Dir.home}/.config/screen-transit/config.yaml
 
       See https://github.com/airiclenz/screen-transit#configuration
-      for config file format and discovery commands.
-
-      To start the background service:
-        brew services start screen-transit
     EOS
   end
 
