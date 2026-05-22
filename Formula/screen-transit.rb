@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.3.3.tar.gz"
-  sha256 "85d7b64c6c280996dbdddeab6d615f6a75119767e39bdaec7c1a2c3da7cec9d5"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.3.4.tar.gz"
+  sha256 "777cdda89849e4f695dda70bd4e5391187b1033a4794410454a5d32d48e6612c"
   license "MIT"
 
   depends_on :macos
@@ -22,7 +22,7 @@ class ScreenTransit < Formula
     identities = `security find-identity -v 2>/dev/null`
 
     if identities.include?(cert_name)
-      system "codesign", "-s", cert_name, "-f", bin/"screen-transit"
+      system bin/"setup-signing.sh", bin/"screen-transit"
     else
       puts
       opoo <<~EOS
@@ -32,7 +32,7 @@ class ScreenTransit < Formula
       ohai <<~EOS
         Run this once to fix (will ask for your login keychain password):
 
-          setup-signing.sh && codesign -s "#{cert_name}" -f #{bin}/screen-transit
+          setup-signing.sh #{bin}/screen-transit
 
       EOS
     end
