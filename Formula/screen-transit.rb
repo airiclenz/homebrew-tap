@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "4442cf11589da394c729235313c6e19deb511237350fa898a445188cba2d5193"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.4.tar.gz"
+  sha256 "b57349c4cf48a5bb506c9ff3a2d3e027ef51272bfab8b6173877e643af299deb"
   license "MIT"
 
   depends_on :macos
@@ -91,13 +91,38 @@ class ScreenTransit < Formula
   end
 
   def caveats
-    <<~EOS
+    legacy_bin   = "/usr/local/bin/screen-transit"
+    legacy_plist = "#{Dir.home}/Library/LaunchAgents/com.screen-transit.agent.plist"
+    legacy_files = [legacy_bin, legacy_plist].select { |path| File.exist?(path) }
+
+    parts = []
+
+    unless legacy_files.empty?
+      bullets = legacy_files.map { |path| "    - #{path}" }.join("\n")
+      parts << <<~EOS
+        Legacy install detected. These files can conflict with the Homebrew
+        install (PATH shadowing, duplicate launchd agents):
+
+        #{bullets}
+
+        Clean up with:
+          launchctl unload #{legacy_plist} 2>/dev/null
+          rm -f #{legacy_plist}
+          sudo rm -f #{legacy_bin}
+
+        Verify afterwards with:  screen-transit --doctor
+      EOS
+    end
+
+    parts << <<~EOS
       Edit the config with your device values, then start the service:
 
         #{Dir.home}/.config/screen-transit/config.yaml
 
       See https://github.com/airiclenz/screen-transit#configuration
     EOS
+
+    parts.join("\n")
   end
 
   test do
