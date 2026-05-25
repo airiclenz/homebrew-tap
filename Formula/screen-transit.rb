@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.5.tar.gz"
-  sha256 "ed591d2490aea2303a7bcff497818c461cf25daf891b9d42934308818b785b1d"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.6.tar.gz"
+  sha256 "5d0e493259b98cbee61ac02d476ff998e27c8360453d0024782efe670ab1efc4"
   license "MIT"
 
   depends_on :macos
