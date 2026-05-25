@@ -1,8 +1,8 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.4.tar.gz"
-  sha256 "b57349c4cf48a5bb506c9ff3a2d3e027ef51272bfab8b6173877e643af299deb"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.5.tar.gz"
+  sha256 "ed591d2490aea2303a7bcff497818c461cf25daf891b9d42934308818b785b1d"
   license "MIT"
 
   depends_on :macos
@@ -18,69 +18,29 @@ class ScreenTransit < Formula
   end
 
   def post_install
-    config_dir = Pathname.new("#{Dir.home}/.config/screen-transit")
-    config_file = config_dir/"config.yaml"
-
-    unless config_file.exist?
-      config_dir.mkpath
-      config_file.write <<~YAML
-        # screen-transit configuration
-        #
-        # Discovery commands:
-        #   blueutil --paired                     Find Bluetooth MAC address
-        #   system_profiler SPBluetoothDataType   Alternative for Bluetooth MAC
-        #   m1ddc display list                    Find display number
-        #   m1ddc get input                       Find current input code
-        #
-        # Common DDC/CI input codes (VCP 0x60) -- verify yours with m1ddc:
-        #   15 = DisplayPort-1    16 = DisplayPort-2
-        #   17 = USB-C             4 = HDMI-1         5 = HDMI-2
-        #
-        # Reload after editing:
-        #   brew services restart screen-transit
-
-        delay: 1.0
-
-        rules:
-          # Uncomment and edit the rules below.
-          #
-          # - name: "Keyboard connect -> DisplayPort"
-          #   source: bluetooth
-          #   device_id: "AA:BB:CC:DD:EE:FF"
-          #   display: 1
-          #   input: 15
-          #   trigger: connect
-          #
-          # - name: "Keyboard disconnect -> USB-C"
-          #   source: bluetooth
-          #   device_id: "AA:BB:CC:DD:EE:FF"
-          #   display: 1
-          #   input: 17
-          #   trigger: disconnect
-      YAML
-      ohai "Default config created at #{config_file}"
-    end
+    # Note: Homebrew's post_install runs inside a sandbox that blocks writes
+    # to ~/.config and modifications to the login keychain. Config creation
+    # and first-time cert setup therefore live in `screen-transit --init`,
+    # which the user runs once after install (see caveats).
+    #
+    # On subsequent upgrades the signing identity already exists, so we can
+    # re-sign the freshly built binary here to preserve TCC permissions
+    # (Bluetooth, etc.) across version bumps. quiet_system never raises.
 
     cert_name = "Screen Transit Local"
+    # No -v: self-signed certs without explicit trust are excluded by
+    # `-v` but still usable by codesign. We avoid trust settings on purpose.
+    has_identity = quiet_system(
+      "/bin/bash", "-c",
+      "security find-identity -p codesigning | grep -q '\"#{cert_name}\"'",
+    )
 
-    if quiet_system("security", "find-certificate", "-c", cert_name)
-      system bin/"screen-transit-signing.sh", bin/"screen-transit"
-    else
-      puts
-      opoo <<~EOS
-        No code-signing certificate found.
-        Without it, macOS will prompt for Bluetooth permission on every launch.
-      EOS
-      ohai <<~EOS
-        Run once to fix:  screen-transit-signing.sh #{opt_bin}/screen-transit
-      EOS
+    if has_identity
+      # Pathname -> String: newer Homebrew (Sorbet-typed) requires String
+      # for argv0 in quiet_system; passing Pathname raises TypeError.
+      quiet_system (bin/"screen-transit-signing.sh").to_s,
+                   (bin/"screen-transit").to_s
     end
-
-    puts
-    ohai "Start/stop as a background service:"
-    puts "  brew services start screen-transit"
-    puts "  brew services stop screen-transit"
-    puts
   end
 
   service do
@@ -115,9 +75,18 @@ class ScreenTransit < Formula
     end
 
     parts << <<~EOS
-      Edit the config with your device values, then start the service:
+      First-time setup — run once:
+
+        screen-transit --init
+
+      This creates a default config and a self-signed certificate so that
+      macOS Bluetooth permissions persist across upgrades. You will be
+      prompted once for your login keychain password.
+
+      Then edit your config and start the service:
 
         #{Dir.home}/.config/screen-transit/config.yaml
+        brew services start screen-transit
 
       See https://github.com/airiclenz/screen-transit#configuration
     EOS
