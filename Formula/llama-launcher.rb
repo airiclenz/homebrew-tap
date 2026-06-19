@@ -4,15 +4,23 @@ class LlamaLauncher < Formula
   url "https://github.com/airiclenz/llama-launcher/archive/refs/tags/v1.4.4.tar.gz"
   sha256 "e444e53ca9e7bf086fa60aafa92813af21423e0116037b21fcda2d2909e0aafe"
   license "MIT"
+  revision 1
 
   depends_on "go" => :build
 
   def install
     ldflags = "-X github.com/airiclenz/llama-launcher/internal/launcher.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:)
+
+    # Optional control-plane adapter: exposes the lifecycle commands as MCP
+    # tools over HTTP for container-to-host control (ADR-0008).
+    mcp_ldflags = "-X main.Version=#{version}"
+    system "go", "build", *std_go_args(output: bin/"llama-launcher-mcp", ldflags: mcp_ldflags),
+           "./cmd/llama-launcher-mcp"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/llama-launcher version")
+    assert_match version.to_s, shell_output("#{bin}/llama-launcher-mcp --version")
   end
 end
