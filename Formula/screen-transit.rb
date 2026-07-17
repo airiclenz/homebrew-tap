@@ -1,17 +1,17 @@
 class ScreenTransit < Formula
   desc "Bluetooth-triggered monitor input switcher for macOS"
   homepage "https://github.com/airiclenz/screen-transit"
-  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.4.7.tar.gz"
-  sha256 "e9fe9fcd581e476ae2dbf75d18fc570cdcb1bcf5f22e1730369220c273cc369c"
+  url "https://github.com/airiclenz/screen-transit/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "6ac4130e552d453d0d4363e83ccaaca84ccf6ac5bb155a9940d13b573321c62e"
   license "MIT"
 
   depends_on :macos
   depends_on :xcode => :build
 
   def install
-    version_swift = "// Auto-generated from VERSION — do not edit manually.\n" \
-                    "let appVersion = \"#{version}\"\n"
-    (buildpath/"Sources/screen-transit/Version.swift").atomic_write(version_swift)
+    # Version.swift is generated at build time by the GenerateVersion SwiftPM
+    # plugin from the tarball's VERSION file — writing our own copy into
+    # Sources/ would redeclare appVersion and break the build (>= 0.5.0).
     system "swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/screen-transit"
     bin.install "screen-transit-signing.sh"
