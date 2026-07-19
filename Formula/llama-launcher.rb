@@ -1,8 +1,8 @@
 class LlamaLauncher < Formula
   desc "CLI tool for managing local LLM servers (llama.cpp, Ollama, LM Studio)"
   homepage "https://github.com/airiclenz/llama-launcher"
-  url "https://github.com/airiclenz/llama-launcher/archive/refs/tags/v1.4.6.tar.gz"
-  sha256 "9897470d8c4a208ef59bde172e79e898bb0a42bc0e01730079f27bf64f7704dc"
+  url "https://github.com/airiclenz/llama-launcher/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "c6128e2bc9493578db690eec4fbab76fe7c4cc8b7feeaa744f061752286dc874"
   license "MIT"
 
   depends_on "go" => :build
