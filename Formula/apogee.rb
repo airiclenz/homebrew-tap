@@ -1,7 +1,7 @@
 class Apogee < Formula
-  desc "Terminal coding agent built local-first, engineered so small LLMs deliver"
+  desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.14.0"
+  version "0.15.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -10,23 +10,23 @@ class Apogee < Formula
   # `make dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.14.0/apogee_0.14.0_darwin_arm64.tar.gz"
-      sha256 "533c810235688e6870898054aa3876aa3ea7c27578456d3fd398a4620872ee64"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.15.0/apogee_0.15.0_darwin_arm64.tar.gz"
+      sha256 "1358157cdfb8d1475907cbfc0482a4a0e115cfcde14d46ba1b2033ecdf7823de"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.14.0/apogee_0.14.0_darwin_amd64.tar.gz"
-      sha256 "9481606c6b80c149dd43519a1b1d4d5f47e3c854557688772f7d6b798095d5b8"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.15.0/apogee_0.15.0_darwin_amd64.tar.gz"
+      sha256 "387cbfa465ce83b0b09ba1541cba8f7af00bc73d29361f8eaa8a9f5849596fe6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.14.0/apogee_0.14.0_linux_arm64.tar.gz"
-      sha256 "d124b502be47e0e2777040943bdb4cd31cad179c65b41889ca8c4dd82cb725c3"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.15.0/apogee_0.15.0_linux_arm64.tar.gz"
+      sha256 "f51341c256a53b1fb98dc888c2bb286750445572c835b60cdb152e478ce4acab"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.14.0/apogee_0.14.0_linux_amd64.tar.gz"
-      sha256 "833420a9d2d786feb4a3da4df918a79fdee8bb2cb9d22199b886af2c7fe3d96f"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.15.0/apogee_0.15.0_linux_amd64.tar.gz"
+      sha256 "9894c5d7f7713b3fba146586f5ddf63119ad3e5a5eb2b91356403aef861522cf"
     end
   end
 
