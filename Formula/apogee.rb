@@ -11,22 +11,22 @@ class Apogee < Formula
   on_macos do
     on_arm do
       url "https://github.com/airiclenz/apogee/releases/download/v0.24.2/apogee_0.24.2_darwin_arm64.tar.gz"
-      sha256 "7e0192c49e08cb0547f2da1c29a1c74239a1b98c3d866d1cae097b0bbfbfd230"
+      sha256 "ad00ce3c966dc1d6963598be0ae19f32c2e5312e648b4afab392c8d3db46db54"
     end
     on_intel do
       url "https://github.com/airiclenz/apogee/releases/download/v0.24.2/apogee_0.24.2_darwin_amd64.tar.gz"
-      sha256 "f1049961fab9bfae850a540470bba85ac15b0609876a0d79827200de6fee1c23"
+      sha256 "b0e5a3395238644e80ddf13bdf2a9950934b02660d7a6da0bd3db578d056cb38"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/airiclenz/apogee/releases/download/v0.24.2/apogee_0.24.2_linux_arm64.tar.gz"
-      sha256 "0a5e19687912a4fba6fce735e621a309138aec611b8c052e3c79491efda3471f"
+      sha256 "f172e404474a465fb125ca0087dee4df1a76e1989a5c3ff1da3cffa85fba9718"
     end
     on_intel do
       url "https://github.com/airiclenz/apogee/releases/download/v0.24.2/apogee_0.24.2_linux_amd64.tar.gz"
-      sha256 "d2181f4d7193c9aedbecd01ca3592c583d4e79fe336213cffdc53e409ad690cb"
+      sha256 "e0f15ad7e6352eec5171ae988d9683d5715d56ee8ca440518ebaf168ff0bcfb2"
     end
   end
 
