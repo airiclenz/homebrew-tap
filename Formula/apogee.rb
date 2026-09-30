@@ -1,7 +1,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.23.0"
+  version "0.24.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -10,23 +10,23 @@ class Apogee < Formula
   # `make dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.23.0/apogee_0.23.0_darwin_arm64.tar.gz"
-      sha256 "6b04c4b34cdcc9348cb4aee7d0e1df2ab9963020f65e8de785053e67a5a27d20"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.0/apogee_0.24.0_darwin_arm64.tar.gz"
+      sha256 "49b6ab5b4fd51a52c4c5d2576ccf615c9be2cb315ec64a856f32c19a6b5ac2bc"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.23.0/apogee_0.23.0_darwin_amd64.tar.gz"
-      sha256 "54516c0a7761c4b1e9df08e1341651b1e2add3a02d186cf47c2946820ac36872"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.0/apogee_0.24.0_darwin_amd64.tar.gz"
+      sha256 "e75b78e3b9ae5ea5307a8dfb07380d5bd3fc26fa659589ce357420e4127e94fe"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.23.0/apogee_0.23.0_linux_arm64.tar.gz"
-      sha256 "46b65a662e81942c4782381918ebc000b93db960f919e6d1d1636835684b5c6b"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.0/apogee_0.24.0_linux_arm64.tar.gz"
+      sha256 "5eb9f57e0317af8fd9250e5f69a89262d1f74a1c23ab77635ef131ef8d376ca6"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.23.0/apogee_0.23.0_linux_amd64.tar.gz"
-      sha256 "bc10b29e52ec0bcc54deb75879a8244e9dce45cf70bc9917bf5f43a04394e5b3"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.0/apogee_0.24.0_linux_amd64.tar.gz"
+      sha256 "8736e15eccd1ff948bfe969ea441a55c31e3c3f47f4ab9404f8b3380f35d2fca"
     end
   end
 
