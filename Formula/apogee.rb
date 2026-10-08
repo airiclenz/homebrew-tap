@@ -1,7 +1,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.24.10"
+  version "0.24.11"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -10,23 +10,23 @@ class Apogee < Formula
   # `make dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.24.10/apogee_0.24.10_darwin_arm64.tar.gz"
-      sha256 "0b6a16d20fbdd5105b28a90dfe411a3ba1699bbc9eac40e81bbcda64ea23965a"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.11/apogee_0.24.11_darwin_arm64.tar.gz"
+      sha256 "f4a3678e3be3e80e7499f95f28791d1981796e545fa36b66997202800bf7b965"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.24.10/apogee_0.24.10_darwin_amd64.tar.gz"
-      sha256 "6e6ccc38fe61ff652943d3debe78d4938d8fe6ecf9061ba24feec89fddcfe557"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.11/apogee_0.24.11_darwin_amd64.tar.gz"
+      sha256 "9b6b43667a030023354afe4ebb26d3ea1c60603af674fbff21e084a6a738cc82"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.24.10/apogee_0.24.10_linux_arm64.tar.gz"
-      sha256 "6a74f7797d763460e58541b7b3401e52caabba4e269e929529854e92e2dae852"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.11/apogee_0.24.11_linux_arm64.tar.gz"
+      sha256 "2aceca17269c94686ae6851feb467630f4f5f952d145aaee30e3debd9abfb3d1"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.24.10/apogee_0.24.10_linux_amd64.tar.gz"
-      sha256 "176501575b42a478e5b56307957b1ce067b7b092c799cd0668a69e0f53c194d0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.24.11/apogee_0.24.11_linux_amd64.tar.gz"
+      sha256 "832be0f87c23d4f1de97722d822bd424af4f71ddac46df2b03f47e6da0a8d7e3"
     end
   end
 
