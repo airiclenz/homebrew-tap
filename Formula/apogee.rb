@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.25.0"
+  version "0.25.1"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.0/apogee_0.25.0_darwin_arm64.tar.gz"
-      sha256 "c034db4d5ee5072be08654debd7e399458323ab684f5d30631ab5a75db741605"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_darwin_arm64.tar.gz"
+      sha256 "0c2a0d971224c63577d493525f327959339d7f3b3ecdd89fed1d9df1cdc90ae0"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.0/apogee_0.25.0_darwin_amd64.tar.gz"
-      sha256 "7806c01dec3a9ff466e048bd88df9ae471f7da2e3dff9e2b63413a63b48aa4d0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_darwin_amd64.tar.gz"
+      sha256 "aa0f49c1371868677f1f306116e219e06a386d4291cc96f9075ff8e066f1b17e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.0/apogee_0.25.0_linux_arm64.tar.gz"
-      sha256 "0df7fd8a96997f5b1e3b6db9b761846c6ad48291fadf99cea47345616bf7c4ff"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_linux_arm64.tar.gz"
+      sha256 "09f57489d18b25272fd9f7f417bfdc0f87f7687c6b7fc57c9486b2fbefe596ce"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.0/apogee_0.25.0_linux_amd64.tar.gz"
-      sha256 "7bb4337d0c49d0ebc6fb4f6fb81c991968918666736949bf8dd8d51837f2cc42"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_linux_amd64.tar.gz"
+      sha256 "b2e1b850faa5e956eb81514b99a9fbce8c6be76129d1a591e0dc492e48cbd591"
     end
   end
 
