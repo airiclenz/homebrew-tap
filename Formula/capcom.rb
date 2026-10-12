@@ -3,7 +3,7 @@
 class Capcom < Formula
   desc "Git-native issue tracker and knowledge store for coding agents"
   homepage "https://github.com/airiclenz/capcom"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -11,23 +11,23 @@ class Capcom < Formula
   # one `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.3.0/capcom_0.3.0_darwin_arm64.tar.gz"
-      sha256 "6448c52dda811c6070075bb5ca9ccae0ef68389aac9e3f0b0884707354871974"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.4.0/capcom_0.4.0_darwin_arm64.tar.gz"
+      sha256 "7693a6c8a1608e7b1e91d0692e44b144253aee43dd9048de366de2d83830a317"
     end
     on_intel do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.3.0/capcom_0.3.0_darwin_amd64.tar.gz"
-      sha256 "fe0bafc896a657a47e7f2800def707e31e801a38c5e878d99cfb76fd3f6bcafe"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.4.0/capcom_0.4.0_darwin_amd64.tar.gz"
+      sha256 "f42577a08e4b3ab58775adb43d6edb71bc0bd830fd97fe76060f3eb6283f05b1"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.3.0/capcom_0.3.0_linux_arm64.tar.gz"
-      sha256 "3f28d4d39d4aa4789c627d016776f41c6eaeee0923d54e5afdc799a5e8769bd4"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.4.0/capcom_0.4.0_linux_arm64.tar.gz"
+      sha256 "02a27be8af41a847265b1ca9b40bd63d547075cf1f6931db5378a89cba6e4079"
     end
     on_intel do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.3.0/capcom_0.3.0_linux_amd64.tar.gz"
-      sha256 "b906645e40d97e4e7740a5a904b70a54b51563f3f2097cc8009668f4d664c16e"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.4.0/capcom_0.4.0_linux_amd64.tar.gz"
+      sha256 "84c2866f6d33ffc4471180aeed3c543e2dc4e7e4208f31346e5dc1a82769ba88"
     end
   end
 
