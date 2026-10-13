@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.25.1"
+  version "0.25.2"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_darwin_arm64.tar.gz"
-      sha256 "0c2a0d971224c63577d493525f327959339d7f3b3ecdd89fed1d9df1cdc90ae0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_darwin_arm64.tar.gz"
+      sha256 "0b7c9132216f223862f191e4a7cf321eeb14009ce0b86cbe9e0122fcb8698584"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_darwin_amd64.tar.gz"
-      sha256 "aa0f49c1371868677f1f306116e219e06a386d4291cc96f9075ff8e066f1b17e"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_darwin_amd64.tar.gz"
+      sha256 "b6156f5035363cdfd8d01264ed12ee36ad052932cd26416310ac29c73799bcf1"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_linux_arm64.tar.gz"
-      sha256 "09f57489d18b25272fd9f7f417bfdc0f87f7687c6b7fc57c9486b2fbefe596ce"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_linux_arm64.tar.gz"
+      sha256 "dd6969a929da168cfb17fbd59a3ddfde72e87bf23eb91be5367c0f5a899bf299"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.1/apogee_0.25.1_linux_amd64.tar.gz"
-      sha256 "b2e1b850faa5e956eb81514b99a9fbce8c6be76129d1a591e0dc492e48cbd591"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_linux_amd64.tar.gz"
+      sha256 "9a3c1a7494cd9653cbe35c402c2d3bccba14b743f02648a5fa636fdfb0fc39ac"
     end
   end
 
