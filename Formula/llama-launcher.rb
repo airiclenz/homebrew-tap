@@ -3,7 +3,7 @@
 class LlamaLauncher < Formula
   desc "CLI tool for managing local LLM servers (llama.cpp, Ollama, LM Studio, Splash)"
   homepage "https://github.com/airiclenz/llama-launcher"
-  version "1.8.2"
+  version "1.9.0"
   license "MIT"
 
   # Installs the prebuilt binaries for this platform rather than compiling, so no Go
@@ -11,28 +11,29 @@ class LlamaLauncher < Formula
   # one `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.8.2/llama-launcher_1.8.2_darwin_arm64.tar.gz"
-      sha256 "35869b90ed886f7c6fae567a631541f6a03008a1c48d3047be02422b23b06601"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.0/llama-launcher_1.9.0_darwin_arm64.tar.gz"
+      sha256 "5935987a89a2d6978cccce88360afdef25069464d1aa7b6c9982f4ee8742774d"
     end
     on_intel do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.8.2/llama-launcher_1.8.2_darwin_amd64.tar.gz"
-      sha256 "2d5fea3db57b794e94d5c52bf7dc5720cac947228b32cc5bf8b30683d9cc551f"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.0/llama-launcher_1.9.0_darwin_amd64.tar.gz"
+      sha256 "a641b87011773033d20c970bc48405b2ddd3d01e3cd1811114aa24c15daa6173"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.8.2/llama-launcher_1.8.2_linux_arm64.tar.gz"
-      sha256 "12db6db0a851c14a901045c0fda7e4914a44a98023053b35ee5d7bf8c239aa8e"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.0/llama-launcher_1.9.0_linux_arm64.tar.gz"
+      sha256 "f56b219de3668fa24d51fc94e69214a45a853b33af1be07365204f063416193f"
     end
     on_intel do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.8.2/llama-launcher_1.8.2_linux_amd64.tar.gz"
-      sha256 "6c13fc924122bd796ce3fb7f414dde8428057ceefc4c46221bdf6e27607fdce7"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.0/llama-launcher_1.9.0_linux_amd64.tar.gz"
+      sha256 "96569b514cb244724e35324754c8c7bb6bec16a1a09e90290cfd77b8813de609"
     end
   end
 
   def install
     bin.install "llama-launcher", "llama-launcher-mcp"
+    generate_completions_from_executable(bin/"llama-launcher", "completions")
   end
 
   test do
