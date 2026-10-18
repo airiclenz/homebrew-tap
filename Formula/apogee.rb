@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.26.0"
+  version "0.26.1"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_darwin_arm64.tar.gz"
-      sha256 "0a05b6dcfff1136bc792ac9bebaa83fbec446f69d3c35b366b3c4626fc202eae"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_darwin_arm64.tar.gz"
+      sha256 "a41b6217c5c6969e1c7cedaac380110e6616512821197b535519cd0b1093070c"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_darwin_amd64.tar.gz"
-      sha256 "aa6a2aef8451daaa209b64c38de68f118aa547bf67554342d481bd7fcdcfb855"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_darwin_amd64.tar.gz"
+      sha256 "4d86c36b4c53e615beda30323f816499581f5f07c7ecee012a4c109d46c4afb2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_linux_arm64.tar.gz"
-      sha256 "066e69f1a3bdda6f41f8fa012eed8b56e8295208eb06585fa01da24711ac22fe"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_linux_arm64.tar.gz"
+      sha256 "590ea566a0be76efe99b5a548a85ff2fe57966aa7bee71873868c74a692bbfb7"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_linux_amd64.tar.gz"
-      sha256 "8e2f06899750e69a9a1fc0e400159abd7d4aef55b11eb12c3cb10a678cb3e69e"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_linux_amd64.tar.gz"
+      sha256 "4204380f0a4a98019c22a50389a3216cc986aa7e16137e3780e1ea146873a61b"
     end
   end
 
