@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.25.2"
+  version "0.26.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_darwin_arm64.tar.gz"
-      sha256 "0b7c9132216f223862f191e4a7cf321eeb14009ce0b86cbe9e0122fcb8698584"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_darwin_arm64.tar.gz"
+      sha256 "0a05b6dcfff1136bc792ac9bebaa83fbec446f69d3c35b366b3c4626fc202eae"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_darwin_amd64.tar.gz"
-      sha256 "b6156f5035363cdfd8d01264ed12ee36ad052932cd26416310ac29c73799bcf1"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_darwin_amd64.tar.gz"
+      sha256 "aa6a2aef8451daaa209b64c38de68f118aa547bf67554342d481bd7fcdcfb855"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_linux_arm64.tar.gz"
-      sha256 "dd6969a929da168cfb17fbd59a3ddfde72e87bf23eb91be5367c0f5a899bf299"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_linux_arm64.tar.gz"
+      sha256 "066e69f1a3bdda6f41f8fa012eed8b56e8295208eb06585fa01da24711ac22fe"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.25.2/apogee_0.25.2_linux_amd64.tar.gz"
-      sha256 "9a3c1a7494cd9653cbe35c402c2d3bccba14b743f02648a5fa636fdfb0fc39ac"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.26.0/apogee_0.26.0_linux_amd64.tar.gz"
+      sha256 "8e2f06899750e69a9a1fc0e400159abd7d4aef55b11eb12c3cb10a678cb3e69e"
     end
   end
 
