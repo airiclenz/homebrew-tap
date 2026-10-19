@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.26.1"
+  version "0.27.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_darwin_arm64.tar.gz"
-      sha256 "a41b6217c5c6969e1c7cedaac380110e6616512821197b535519cd0b1093070c"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.27.0/apogee_0.27.0_darwin_arm64.tar.gz"
+      sha256 "e5e04b644fe9c03c60cdd1b9b1d6536280b0334b5702db4e0f9835ac286e2435"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_darwin_amd64.tar.gz"
-      sha256 "4d86c36b4c53e615beda30323f816499581f5f07c7ecee012a4c109d46c4afb2"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.27.0/apogee_0.27.0_darwin_amd64.tar.gz"
+      sha256 "6aaae0b65d08fabf999d151c1e342918fed02540f47eebc4b7aa61e5f120a53a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_linux_arm64.tar.gz"
-      sha256 "590ea566a0be76efe99b5a548a85ff2fe57966aa7bee71873868c74a692bbfb7"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.27.0/apogee_0.27.0_linux_arm64.tar.gz"
+      sha256 "df428180ec05dae80cc6fbf455f5702e00ecf556dbfd1c14819f4b9108a0d184"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.26.1/apogee_0.26.1_linux_amd64.tar.gz"
-      sha256 "4204380f0a4a98019c22a50389a3216cc986aa7e16137e3780e1ea146873a61b"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.27.0/apogee_0.27.0_linux_amd64.tar.gz"
+      sha256 "8347bd68ffc98ce4fdcd4a36f985725b2b8bd718f3f8ff16c409e9fb90d7e216"
     end
   end
 
