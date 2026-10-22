@@ -3,7 +3,7 @@
 class Photon < Formula
   desc "Record, check and render a terminal app's demo clip from its storyboard"
   homepage "https://github.com/airiclenz/photon"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   # `photon render` encodes the GIF with ffmpeg; gifsicle, which only shrinks it, stays optional.
@@ -14,23 +14,23 @@ class Photon < Formula
   # one `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/photon/releases/download/v0.1.0/photon_0.1.0_darwin_arm64.tar.gz"
-      sha256 "c2d7c07a0e48445f5975408dc1d59209784ff3df13578337c8070ba95ffd39b4"
+      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_darwin_arm64.tar.gz"
+      sha256 "55313d56c790ee8eb50ade2bc127275a957893ec9340943951e78101d7c51f11"
     end
     on_intel do
-      url "https://github.com/airiclenz/photon/releases/download/v0.1.0/photon_0.1.0_darwin_amd64.tar.gz"
-      sha256 "3ac24b210ffde3821ce08079e66d410249a35f2b9fb9f8a63508313998df2c0e"
+      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_darwin_amd64.tar.gz"
+      sha256 "8b5e552e52b3a4882f7f7afbb0671f5021253e28d5d446303a028bad5256fc50"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/photon/releases/download/v0.1.0/photon_0.1.0_linux_arm64.tar.gz"
-      sha256 "3825bef1d4bb17ed38ab4cf8dedb17b7eb0762e445004f4bc012c8fd1bce7e18"
+      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_linux_arm64.tar.gz"
+      sha256 "aed46f936c868d1de6800a8e6354481ece56a6948f3e498d0988e33ae384b7a4"
     end
     on_intel do
-      url "https://github.com/airiclenz/photon/releases/download/v0.1.0/photon_0.1.0_linux_amd64.tar.gz"
-      sha256 "a8aa43cfe31071b637a4c816dafb0ea5d87448fec9212ca4d5d20892e1af0214"
+      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_linux_amd64.tar.gz"
+      sha256 "3fefc8d6350ac80ac10ae8d5ebfbc432ffaa7cb277a4843db038fd85deb71009"
     end
   end
 
@@ -39,7 +39,7 @@ class Photon < Formula
   end
 
   test do
-    # `photon version` prints the bare version, X.Y.Z.
+    # `photon version` prints its build string, photon X.Y.Z (<commit>[, dirty]).
     assert_match version.to_s, shell_output("#{bin}/photon version")
   end
 end
