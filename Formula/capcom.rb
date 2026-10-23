@@ -3,7 +3,7 @@
 class Capcom < Formula
   desc "Git-native issue tracker and knowledge store for coding agents"
   homepage "https://github.com/airiclenz/capcom"
-  version "0.9.2"
+  version "0.10.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -11,23 +11,23 @@ class Capcom < Formula
   # one `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.9.2/capcom_0.9.2_darwin_arm64.tar.gz"
-      sha256 "4726808c3f128ff60ea568f4e16bf70cbb0e7a2f16e8ca70a8faad4aab0c323d"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.10.0/capcom_0.10.0_darwin_arm64.tar.gz"
+      sha256 "40cc78237229b342db62100b14de35238c07383ec2cfef7bc287db09aa14d2c4"
     end
     on_intel do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.9.2/capcom_0.9.2_darwin_amd64.tar.gz"
-      sha256 "ba00b8b271b8aff6980b538c612424ca981fb9781f9b3a65c2e01f998a469357"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.10.0/capcom_0.10.0_darwin_amd64.tar.gz"
+      sha256 "ee27efe20fe573281dd98b006d79a412d53e285535e917dc04ff4c2fa70a4b00"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.9.2/capcom_0.9.2_linux_arm64.tar.gz"
-      sha256 "c1d549359b9025255fec3f87d01dafc1e5c24b0d16ef2438c3c793d3aecdec4a"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.10.0/capcom_0.10.0_linux_arm64.tar.gz"
+      sha256 "6334bcf256122d7957f2ec0a3910cde639335a8adabb8ecdf67e47640cad49d2"
     end
     on_intel do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.9.2/capcom_0.9.2_linux_amd64.tar.gz"
-      sha256 "40e74fdb303f9def24a30e4cd79ec2600391f9b64753075efd84796aa9c499ba"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.10.0/capcom_0.10.0_linux_amd64.tar.gz"
+      sha256 "6c873a47cfec314a1b0f524e261dbeeae03b63fb9cce93bbcbc53a89be3565c3"
     end
   end
 
