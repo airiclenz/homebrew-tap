@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.28.0"
+  version "0.29.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.28.0/apogee_0.28.0_darwin_arm64.tar.gz"
-      sha256 "65ccf399f288cad8b0c64832d80837b692561732cf36116ac8d8a6338e1ab7d7"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_darwin_arm64.tar.gz"
+      sha256 "ece42204251e518e36a6e9c5637fd244c3287da91cb0841cf7d584e63e936daa"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.28.0/apogee_0.28.0_darwin_amd64.tar.gz"
-      sha256 "e71e8a4359b7187f9bc7463ff6ef3ba63f286ac05b2f967f6f2decd69e8a2470"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_darwin_amd64.tar.gz"
+      sha256 "3618c0fd4631c260f5db87f12db7ac58a75264021870eaf81a8ad8476af8e13a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.28.0/apogee_0.28.0_linux_arm64.tar.gz"
-      sha256 "ff3848ebdb6e71119ad839982de17e7d2e71ba7706494756c332095e22c0a51e"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_linux_arm64.tar.gz"
+      sha256 "96ca361071788296fe2d0c8c1060547ed8ea096ac0310a43710794bfbe6fc47d"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.28.0/apogee_0.28.0_linux_amd64.tar.gz"
-      sha256 "4902ba1b88ab1c1d894c56ebca80790144c01b4246762784e6281a1e0ec78807"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_linux_amd64.tar.gz"
+      sha256 "de6f3f66eae15c226844561cbba581afa723562f3bd028c06575fdf0fb47a8cc"
     end
   end
 
