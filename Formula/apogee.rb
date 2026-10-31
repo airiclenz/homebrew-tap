@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.29.0"
+  version "0.29.1"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_darwin_arm64.tar.gz"
-      sha256 "ece42204251e518e36a6e9c5637fd244c3287da91cb0841cf7d584e63e936daa"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_darwin_arm64.tar.gz"
+      sha256 "a62276ff66e5c99e29efdec1a3f676e085196dfe9f1c88e70a31aea592c321f5"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_darwin_amd64.tar.gz"
-      sha256 "3618c0fd4631c260f5db87f12db7ac58a75264021870eaf81a8ad8476af8e13a"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_darwin_amd64.tar.gz"
+      sha256 "c4b8a71fe2b31a5f459863f4c7c110dd3cc1b7a14651cb14d242a5ebd1127395"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_linux_arm64.tar.gz"
-      sha256 "96ca361071788296fe2d0c8c1060547ed8ea096ac0310a43710794bfbe6fc47d"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_linux_arm64.tar.gz"
+      sha256 "dc0274f6f7d2002b3a99a2cc39cf7a6132e016fe90b53cda685d1e6a94c84f68"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.0/apogee_0.29.0_linux_amd64.tar.gz"
-      sha256 "de6f3f66eae15c226844561cbba581afa723562f3bd028c06575fdf0fb47a8cc"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_linux_amd64.tar.gz"
+      sha256 "bd646689c2048e8391cde306c7bc7277a308e6f417cb1150ca3689830f9d7a33"
     end
   end
 
