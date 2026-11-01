@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.29.1"
+  version "0.29.2"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_darwin_arm64.tar.gz"
-      sha256 "a62276ff66e5c99e29efdec1a3f676e085196dfe9f1c88e70a31aea592c321f5"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_darwin_arm64.tar.gz"
+      sha256 "2d926e1caa58efaf55261e4de539b186802be7bafda8c4441ca6eca3adb6929e"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_darwin_amd64.tar.gz"
-      sha256 "c4b8a71fe2b31a5f459863f4c7c110dd3cc1b7a14651cb14d242a5ebd1127395"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_darwin_amd64.tar.gz"
+      sha256 "43d8dd7a53cb7f460abc0180ac510a8e5191c1442571afc4e326ed526be1e8a6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_linux_arm64.tar.gz"
-      sha256 "dc0274f6f7d2002b3a99a2cc39cf7a6132e016fe90b53cda685d1e6a94c84f68"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_linux_arm64.tar.gz"
+      sha256 "dc8420e32141e1d491ffd9dece9f9b7faaab9ebd28f0211addc3213f273ae585"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.1/apogee_0.29.1_linux_amd64.tar.gz"
-      sha256 "bd646689c2048e8391cde306c7bc7277a308e6f417cb1150ca3689830f9d7a33"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_linux_amd64.tar.gz"
+      sha256 "ceee1ca17a2320fe12d456b149293a53b65c6a676f62f714ff5f14e08be34d7a"
     end
   end
 
