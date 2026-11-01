@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.29.2"
+  version "0.30.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_darwin_arm64.tar.gz"
-      sha256 "2d926e1caa58efaf55261e4de539b186802be7bafda8c4441ca6eca3adb6929e"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.30.0/apogee_0.30.0_darwin_arm64.tar.gz"
+      sha256 "97fae58dfbc52897af6258a01786c80b24ac43efd07e3705eabffb4c12f04ba6"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_darwin_amd64.tar.gz"
-      sha256 "43d8dd7a53cb7f460abc0180ac510a8e5191c1442571afc4e326ed526be1e8a6"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.30.0/apogee_0.30.0_darwin_amd64.tar.gz"
+      sha256 "dd2cebfea51fc2c1c73b5690a2d407feee0ad3ab3729b86c30702350456329d5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_linux_arm64.tar.gz"
-      sha256 "dc8420e32141e1d491ffd9dece9f9b7faaab9ebd28f0211addc3213f273ae585"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.30.0/apogee_0.30.0_linux_arm64.tar.gz"
+      sha256 "469f07bf6c1e36f71db5142d7ecef9c01554d388da628d6e5c7faa1e93b29f07"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.29.2/apogee_0.29.2_linux_amd64.tar.gz"
-      sha256 "ceee1ca17a2320fe12d456b149293a53b65c6a676f62f714ff5f14e08be34d7a"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.30.0/apogee_0.30.0_linux_amd64.tar.gz"
+      sha256 "4164963bea5ca29918e1cd3718f61379496f0c53a858d6d6ac609f2d211379fb"
     end
   end
 
