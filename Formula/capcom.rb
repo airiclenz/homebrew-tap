@@ -3,7 +3,7 @@
 class Capcom < Formula
   desc "Git-native issue tracker and knowledge store for coding agents"
   homepage "https://github.com/airiclenz/capcom"
-  version "0.14.0"
+  version "0.14.1"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -11,23 +11,23 @@ class Capcom < Formula
   # one `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.14.0/capcom_0.14.0_darwin_arm64.tar.gz"
-      sha256 "720811c2959be249d86a82adccacda8f2c0388dbf3a7ddc8eca69ea757ecc974"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.14.1/capcom_0.14.1_darwin_arm64.tar.gz"
+      sha256 "8136d3d82fa7cffe0b7708b680af185552844d3f656d9067efb1c26e8eb5fa38"
     end
     on_intel do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.14.0/capcom_0.14.0_darwin_amd64.tar.gz"
-      sha256 "329817374d7e6fd8e34d77e673ac29cba800fe8e0006f01a546df0e85d0eccce"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.14.1/capcom_0.14.1_darwin_amd64.tar.gz"
+      sha256 "e8ec66f67e84b487c2c0dfa45add3511f71420da56961f09894edd2713967d7b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.14.0/capcom_0.14.0_linux_arm64.tar.gz"
-      sha256 "28b419e8a7932015d362a0358a0b02084b54c480031c1a6338c349431f1bab7b"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.14.1/capcom_0.14.1_linux_arm64.tar.gz"
+      sha256 "04ffeb6866ae5895231cecca9f7623e1403e89c2864d4c4913238b91774de396"
     end
     on_intel do
-      url "https://github.com/airiclenz/capcom/releases/download/v0.14.0/capcom_0.14.0_linux_amd64.tar.gz"
-      sha256 "368dbbd064e5a202b4ef95714849d6590e671e278ffa2ba14fb25f873a7dc1ac"
+      url "https://github.com/airiclenz/capcom/releases/download/v0.14.1/capcom_0.14.1_linux_amd64.tar.gz"
+      sha256 "4e252f2491d414b99afbf0dbb4622819957772c478243a2e5205b84fcc056a50"
     end
   end
 
