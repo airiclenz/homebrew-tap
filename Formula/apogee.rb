@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.31.0"
+  version "0.32.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.31.0/apogee_0.31.0_darwin_arm64.tar.gz"
-      sha256 "8b02dbf6db623a25b9beaba30121df2694976ce279adc63a932fe61d3f7af77e"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.32.0/apogee_0.32.0_darwin_arm64.tar.gz"
+      sha256 "5910c530a8d5803f378b15adc732e6aabe2de1bc8fe6e09fa1b193c49ebc95dd"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.31.0/apogee_0.31.0_darwin_amd64.tar.gz"
-      sha256 "e0625fd584b52722bdbc7c67c96baca4ab85637bbfc101bdb4e2da11d592f3cc"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.32.0/apogee_0.32.0_darwin_amd64.tar.gz"
+      sha256 "7c966bb094490ba719beaf34630608bed36f541eea891e736e99ee3aa78e7215"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.31.0/apogee_0.31.0_linux_arm64.tar.gz"
-      sha256 "545122e385a01af0876546f0057a6ed84c06bfa0109f68175e9a49493475ffa4"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.32.0/apogee_0.32.0_linux_arm64.tar.gz"
+      sha256 "86663e133a92b3805e42c7fb78cec26ea58dfe9db4c12dfcd76d318015af8283"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.31.0/apogee_0.31.0_linux_amd64.tar.gz"
-      sha256 "a83793385e23764632dbc303f4f09d7154aec1ec5c555309e9cc98fa97544235"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.32.0/apogee_0.32.0_linux_amd64.tar.gz"
+      sha256 "85516edceeec32476941068dbcb5e66b1ec89e5c2990db08555c68999c4a482c"
     end
   end
 
