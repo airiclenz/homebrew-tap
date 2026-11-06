@@ -3,7 +3,7 @@
 class Photon < Formula
   desc "Record, check and render a terminal app's demo clip from its storyboard"
   homepage "https://github.com/airiclenz/photon"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   # `photon render` encodes the GIF with ffmpeg; gifsicle, which only shrinks it, stays optional.
@@ -14,23 +14,23 @@ class Photon < Formula
   # one `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_darwin_arm64.tar.gz"
-      sha256 "55313d56c790ee8eb50ade2bc127275a957893ec9340943951e78101d7c51f11"
+      url "https://github.com/airiclenz/photon/releases/download/v0.3.0/photon_0.3.0_darwin_arm64.tar.gz"
+      sha256 "94846c4a8621fb077c45d2373067d525b11f6d5f1162c9c5912e54426863cb40"
     end
     on_intel do
-      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_darwin_amd64.tar.gz"
-      sha256 "8b5e552e52b3a4882f7f7afbb0671f5021253e28d5d446303a028bad5256fc50"
+      url "https://github.com/airiclenz/photon/releases/download/v0.3.0/photon_0.3.0_darwin_amd64.tar.gz"
+      sha256 "f345d853c909b5d5c3140489534bd3054f7c4201ec70333f38284733a8cf859d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_linux_arm64.tar.gz"
-      sha256 "aed46f936c868d1de6800a8e6354481ece56a6948f3e498d0988e33ae384b7a4"
+      url "https://github.com/airiclenz/photon/releases/download/v0.3.0/photon_0.3.0_linux_arm64.tar.gz"
+      sha256 "7d5a52a91fecb56014df66dcb861b8c4b64479e994bc4bc7bcaf3c673c04fb43"
     end
     on_intel do
-      url "https://github.com/airiclenz/photon/releases/download/v0.2.0/photon_0.2.0_linux_amd64.tar.gz"
-      sha256 "3fefc8d6350ac80ac10ae8d5ebfbc432ffaa7cb277a4843db038fd85deb71009"
+      url "https://github.com/airiclenz/photon/releases/download/v0.3.0/photon_0.3.0_linux_amd64.tar.gz"
+      sha256 "c106c65bca7b28a64ec517452ca6e316e1e229faf4f739228911d7621cd89849"
     end
   end
 
