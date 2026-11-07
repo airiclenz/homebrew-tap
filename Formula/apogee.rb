@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.33.0"
+  version "0.33.1"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.0/apogee_0.33.0_darwin_arm64.tar.gz"
-      sha256 "d5da0b28d7deccad375b2cd8b5eae871e96e9284c2354daabc081a255513c4a9"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_darwin_arm64.tar.gz"
+      sha256 "437ea293b798664e939d0fac61861aaabdd4ba94ed0559b0f561b86247cc5c47"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.0/apogee_0.33.0_darwin_amd64.tar.gz"
-      sha256 "ce221ea1126a921b6f7d3a76739cb28b6d4c55f8e5abfc72ae76f799e497e344"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_darwin_amd64.tar.gz"
+      sha256 "1ec71ec6cf677466f8dc4b5349679950c508efbe4618e6f9bf2fa5f5ac676896"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.0/apogee_0.33.0_linux_arm64.tar.gz"
-      sha256 "0a33250e41ca61afbf1deb776b3b1ac80248a8c45417e5fd63d96b4727ddbae0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_linux_arm64.tar.gz"
+      sha256 "f5db9244b5622f3d8e82561f430c548a7d98d098fedcc0a07b865725495d277c"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.0/apogee_0.33.0_linux_amd64.tar.gz"
-      sha256 "bcdb812f8354359eca87bb267dc38cab4285c7d490be4050ad83e5ce423c4c71"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_linux_amd64.tar.gz"
+      sha256 "2d1d7eca22ced5477ffba9eefc50d6f80c9268ff5b532fe3b270f9f3e702d6c9"
     end
   end
 
