@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.33.1"
+  version "0.34.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_darwin_arm64.tar.gz"
-      sha256 "437ea293b798664e939d0fac61861aaabdd4ba94ed0559b0f561b86247cc5c47"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_darwin_arm64.tar.gz"
+      sha256 "edf907ac29075d80f611fb41de28c1a89dd7ff118c5fb9eb3f180a6a76920de0"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_darwin_amd64.tar.gz"
-      sha256 "1ec71ec6cf677466f8dc4b5349679950c508efbe4618e6f9bf2fa5f5ac676896"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_darwin_amd64.tar.gz"
+      sha256 "c0d088f53600eb456af6ac43ae0db242ee1a057df0df5d3735c504574bb44423"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_linux_arm64.tar.gz"
-      sha256 "f5db9244b5622f3d8e82561f430c548a7d98d098fedcc0a07b865725495d277c"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_linux_arm64.tar.gz"
+      sha256 "d2c2e3991975ab200983319a079654757e8580925b77bdb0ac7c911529a5a3e0"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.33.1/apogee_0.33.1_linux_amd64.tar.gz"
-      sha256 "2d1d7eca22ced5477ffba9eefc50d6f80c9268ff5b532fe3b270f9f3e702d6c9"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_linux_amd64.tar.gz"
+      sha256 "d915279d223044964aa7f5f1955fe53f80c0c18f1eb6a272b01261fbdeeac7c9"
     end
   end
 
