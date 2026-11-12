@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.0"
+  version "0.35.1"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_darwin_arm64.tar.gz"
-      sha256 "f3567232a6630f993797ed2845173b504c11d734553104e8486ca34629e54844"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.1/apogee_0.35.1_darwin_arm64.tar.gz"
+      sha256 "ef351067f6bf254b0e588d1f48310871f29111c6f5a35bfb1216c0310f7ddb84"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_darwin_amd64.tar.gz"
-      sha256 "3c6f6b090c330e9025a691f6d9d69d5b6c106e1ff6a2c1a0b718165055ddf0f4"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.1/apogee_0.35.1_darwin_amd64.tar.gz"
+      sha256 "b78cef79109ef9ad8543a6eabc12a35e5712df72ef7d88948fbf976d93bb362c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_linux_arm64.tar.gz"
-      sha256 "6c10cd11fb38691b95d50c10e0fa1d1e4358a3b4551b8d68477eb09b9f01d032"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.1/apogee_0.35.1_linux_arm64.tar.gz"
+      sha256 "0fa0643ef8933e2dafbf2e8623d6025aa8255d49d41ae2218f2f84060c78bee2"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_linux_amd64.tar.gz"
-      sha256 "3ba1f1c6476eb5cfea19f007d89a4df878e4b6797913b6bca20fea86b0579ce7"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.1/apogee_0.35.1_linux_amd64.tar.gz"
+      sha256 "d0a48f0e2da00a60ed9f28c7218e51c010b1f52b092595af5527a6b6cc560f19"
     end
   end
 
