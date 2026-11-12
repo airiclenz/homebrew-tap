@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.34.0"
+  version "0.35.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_darwin_arm64.tar.gz"
-      sha256 "edf907ac29075d80f611fb41de28c1a89dd7ff118c5fb9eb3f180a6a76920de0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_darwin_arm64.tar.gz"
+      sha256 "f3567232a6630f993797ed2845173b504c11d734553104e8486ca34629e54844"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_darwin_amd64.tar.gz"
-      sha256 "c0d088f53600eb456af6ac43ae0db242ee1a057df0df5d3735c504574bb44423"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_darwin_amd64.tar.gz"
+      sha256 "3c6f6b090c330e9025a691f6d9d69d5b6c106e1ff6a2c1a0b718165055ddf0f4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_linux_arm64.tar.gz"
-      sha256 "d2c2e3991975ab200983319a079654757e8580925b77bdb0ac7c911529a5a3e0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_linux_arm64.tar.gz"
+      sha256 "6c10cd11fb38691b95d50c10e0fa1d1e4358a3b4551b8d68477eb09b9f01d032"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.34.0/apogee_0.34.0_linux_amd64.tar.gz"
-      sha256 "d915279d223044964aa7f5f1955fe53f80c0c18f1eb6a272b01261fbdeeac7c9"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.0/apogee_0.35.0_linux_amd64.tar.gz"
+      sha256 "3ba1f1c6476eb5cfea19f007d89a4df878e4b6797913b6bca20fea86b0579ce7"
     end
   end
 
