@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.2"
+  version "0.35.3"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.2/apogee_0.35.2_darwin_arm64.tar.gz"
-      sha256 "29cbf70e2cfbf05ed942cbd2eae0c13a26c826f07842eb3fbc038116081caa35"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_darwin_arm64.tar.gz"
+      sha256 "20e158993f9e0146109123924dcbacfd87e75c314fd3112822e86cdfdb14fb50"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.2/apogee_0.35.2_darwin_amd64.tar.gz"
-      sha256 "2e4b01237415dcd9fa63379701c330c163740b284b271f2d9426843399e3acc8"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_darwin_amd64.tar.gz"
+      sha256 "4a436f9e4ba0f6b9dee0f0c364594820da0d52c1943c161f880f81c75a364997"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.2/apogee_0.35.2_linux_arm64.tar.gz"
-      sha256 "56e33762f581d44deaf44402662d8d7adc23a3a36c86686adc0ede08e3bab401"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_linux_arm64.tar.gz"
+      sha256 "df43e1ff291e452cbb0f33b81759a45960597e0b9f4683dc91305a845b2d65f0"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.2/apogee_0.35.2_linux_amd64.tar.gz"
-      sha256 "af07acf8924a66feedd59baee07f6b7cb7db8a6392fef859e21a9e2be1d6c3d9"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_linux_amd64.tar.gz"
+      sha256 "4bbb0f96f0dd9b26b43871564dc290f67c8fcdc442380d5afe39da13f3ee2cae"
     end
   end
 
