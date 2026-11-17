@@ -3,7 +3,7 @@
 class LlamaLauncher < Formula
   desc "CLI tool for managing local LLM servers (llama.cpp, Ollama, LM Studio, Splash)"
   homepage "https://github.com/airiclenz/llama-launcher"
-  version "1.9.2"
+  version "1.10.0"
   license "MIT"
 
   # Installs the prebuilt binaries for this platform rather than compiling, so no Go
@@ -11,23 +11,23 @@ class LlamaLauncher < Formula
   # one `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.2/llama-launcher_1.9.2_darwin_arm64.tar.gz"
-      sha256 "f6e4f251789487762200b8fa083f7ae24538b0e3be214cfbdf149f887eaf534f"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.10.0/llama-launcher_1.10.0_darwin_arm64.tar.gz"
+      sha256 "f88a0f59a325da395923894ba03a1fbe61747b039370d55032fc9fa30b215d7a"
     end
     on_intel do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.2/llama-launcher_1.9.2_darwin_amd64.tar.gz"
-      sha256 "de41ee2449a79d581fe6379f8cec686eceaa9520ecaf43fd587e515e314a353d"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.10.0/llama-launcher_1.10.0_darwin_amd64.tar.gz"
+      sha256 "8e0ff588111387d0a8fb2d88eea2930d2c163e8181240d7a3fb383859c775a46"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.2/llama-launcher_1.9.2_linux_arm64.tar.gz"
-      sha256 "8bb410d7d5ab6282e139cdcbe2e702902f1415de335f6a75384ed04e48a72ef4"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.10.0/llama-launcher_1.10.0_linux_arm64.tar.gz"
+      sha256 "f8ba55b8557d18a10a6d04168872877387acdef3d20febc6825ffe587edf8e00"
     end
     on_intel do
-      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.9.2/llama-launcher_1.9.2_linux_amd64.tar.gz"
-      sha256 "35d6b11b2315a3eab5ae28b2f6515289106be109eb2576073129e36e83a2b6ef"
+      url "https://github.com/airiclenz/llama-launcher/releases/download/v1.10.0/llama-launcher_1.10.0_linux_amd64.tar.gz"
+      sha256 "da9cd36609bf6f9b071512ff1fc794dcec9c64be7e3327d0090d1971d9696ca9"
     end
   end
 
