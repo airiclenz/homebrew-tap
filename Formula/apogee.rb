@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.3"
+  version "0.35.4"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_darwin_arm64.tar.gz"
-      sha256 "20e158993f9e0146109123924dcbacfd87e75c314fd3112822e86cdfdb14fb50"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_darwin_arm64.tar.gz"
+      sha256 "4213cabc0ab57139ba971d3aaaa1ed1149005f76bdba6eb03ce24ab19693d449"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_darwin_amd64.tar.gz"
-      sha256 "4a436f9e4ba0f6b9dee0f0c364594820da0d52c1943c161f880f81c75a364997"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_darwin_amd64.tar.gz"
+      sha256 "3b5e10ce0469c1c1356541b4353a3406ab123b29e9bdd122c40d20a3f7158b76"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_linux_arm64.tar.gz"
-      sha256 "df43e1ff291e452cbb0f33b81759a45960597e0b9f4683dc91305a845b2d65f0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_linux_arm64.tar.gz"
+      sha256 "1781f280bd91ad8fcb649efb1909658800d9df6887bcfc04d074fd2125a7e0bf"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.3/apogee_0.35.3_linux_amd64.tar.gz"
-      sha256 "4bbb0f96f0dd9b26b43871564dc290f67c8fcdc442380d5afe39da13f3ee2cae"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_linux_amd64.tar.gz"
+      sha256 "1b8cf59bf3af915edf2ec95a7e25d2cd936a50a5be5efbeef34df016762eb3f8"
     end
   end
 
