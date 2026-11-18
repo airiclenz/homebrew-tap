@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.4"
+  version "0.35.5"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_darwin_arm64.tar.gz"
-      sha256 "4213cabc0ab57139ba971d3aaaa1ed1149005f76bdba6eb03ce24ab19693d449"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_darwin_arm64.tar.gz"
+      sha256 "b6568c382f294497658e22e947e72d108c9c770338f96a5bb245b863365a9269"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_darwin_amd64.tar.gz"
-      sha256 "3b5e10ce0469c1c1356541b4353a3406ab123b29e9bdd122c40d20a3f7158b76"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_darwin_amd64.tar.gz"
+      sha256 "e20bd9263163c32b53e80742b8e2eb1bd34fa9782e1c19a3eab20d5b22dc56bc"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_linux_arm64.tar.gz"
-      sha256 "1781f280bd91ad8fcb649efb1909658800d9df6887bcfc04d074fd2125a7e0bf"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_linux_arm64.tar.gz"
+      sha256 "55cf4cfcd98159bdea48453f032dc929f3a95f0f00542bfde9e4730d838f2614"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.4/apogee_0.35.4_linux_amd64.tar.gz"
-      sha256 "1b8cf59bf3af915edf2ec95a7e25d2cd936a50a5be5efbeef34df016762eb3f8"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_linux_amd64.tar.gz"
+      sha256 "8a1ec12f81f01c227bdfddb1234b65d25d6a09afa26016a0cd9de2b7e422926c"
     end
   end
 
