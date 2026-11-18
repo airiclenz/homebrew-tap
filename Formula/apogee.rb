@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.5"
+  version "0.35.6"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_darwin_arm64.tar.gz"
-      sha256 "b6568c382f294497658e22e947e72d108c9c770338f96a5bb245b863365a9269"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_darwin_arm64.tar.gz"
+      sha256 "f5ef7c7096de8c839edbe92316f30fecec7f808084e38332765602116eb85848"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_darwin_amd64.tar.gz"
-      sha256 "e20bd9263163c32b53e80742b8e2eb1bd34fa9782e1c19a3eab20d5b22dc56bc"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_darwin_amd64.tar.gz"
+      sha256 "bfcf49e5070acf6d12733450dddbd909d52983aa9c2f7b8ff289f04a8f89cf6f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_linux_arm64.tar.gz"
-      sha256 "55cf4cfcd98159bdea48453f032dc929f3a95f0f00542bfde9e4730d838f2614"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_linux_arm64.tar.gz"
+      sha256 "4b69bc6923000946c2c10473880aef5de64ab1c6304049a690c2b6239e5aaaf6"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.5/apogee_0.35.5_linux_amd64.tar.gz"
-      sha256 "8a1ec12f81f01c227bdfddb1234b65d25d6a09afa26016a0cd9de2b7e422926c"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_linux_amd64.tar.gz"
+      sha256 "bf175d379ded3d791d4c894c624980d3334e13aaf6f82cd8f350b8b5c21a87d5"
     end
   end
 
