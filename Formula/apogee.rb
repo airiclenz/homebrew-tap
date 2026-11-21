@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.6"
+  version "0.35.7"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_darwin_arm64.tar.gz"
-      sha256 "f5ef7c7096de8c839edbe92316f30fecec7f808084e38332765602116eb85848"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_darwin_arm64.tar.gz"
+      sha256 "d7df7ea51d810cc4743e18f6ed5bbd7ed4dcf1990998734a532be999a9719fcd"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_darwin_amd64.tar.gz"
-      sha256 "bfcf49e5070acf6d12733450dddbd909d52983aa9c2f7b8ff289f04a8f89cf6f"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_darwin_amd64.tar.gz"
+      sha256 "83fb168814dbcad75888a2b67795be15888424d5b36172359de4b3a77b8f065c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_linux_arm64.tar.gz"
-      sha256 "4b69bc6923000946c2c10473880aef5de64ab1c6304049a690c2b6239e5aaaf6"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_linux_arm64.tar.gz"
+      sha256 "ccffb81279a49de72664a12ac787a67f9eca2d87d88a2ed6c1cde828a15c2183"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.6/apogee_0.35.6_linux_amd64.tar.gz"
-      sha256 "bf175d379ded3d791d4c894c624980d3334e13aaf6f82cd8f350b8b5c21a87d5"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_linux_amd64.tar.gz"
+      sha256 "e59890a393dfa60cfaeb96ab8fe918aad44341d68a4b11b7d363c104779994a1"
     end
   end
 
