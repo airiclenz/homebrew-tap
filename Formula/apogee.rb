@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.7"
+  version "0.35.8"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_darwin_arm64.tar.gz"
-      sha256 "d7df7ea51d810cc4743e18f6ed5bbd7ed4dcf1990998734a532be999a9719fcd"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_darwin_arm64.tar.gz"
+      sha256 "275ac6a2d5ecbef27feeb9b2ac3846ea21611769dbbc35ae7563abcd85fc57ed"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_darwin_amd64.tar.gz"
-      sha256 "83fb168814dbcad75888a2b67795be15888424d5b36172359de4b3a77b8f065c"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_darwin_amd64.tar.gz"
+      sha256 "95f7a95a865ce39b5f07eaa5c25c8bd7fb5533d7c0354b8d1537c7675e55a0ef"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_linux_arm64.tar.gz"
-      sha256 "ccffb81279a49de72664a12ac787a67f9eca2d87d88a2ed6c1cde828a15c2183"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_linux_arm64.tar.gz"
+      sha256 "ba1fd220e131b3c527de13e9c8387df2a9ee49afadd346e095ec19df23e54a73"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.7/apogee_0.35.7_linux_amd64.tar.gz"
-      sha256 "e59890a393dfa60cfaeb96ab8fe918aad44341d68a4b11b7d363c104779994a1"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_linux_amd64.tar.gz"
+      sha256 "7eefc008c4b6e708bad5b46a8b8066116f7a6e19bcad68f8aee394c663929824"
     end
   end
 
