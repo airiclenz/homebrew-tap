@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.8"
+  version "0.35.9"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_darwin_arm64.tar.gz"
-      sha256 "275ac6a2d5ecbef27feeb9b2ac3846ea21611769dbbc35ae7563abcd85fc57ed"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_darwin_arm64.tar.gz"
+      sha256 "3b5bc5e5b9b8443a8552a0769421542a25cae650de580ca1eb588f66c5266090"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_darwin_amd64.tar.gz"
-      sha256 "95f7a95a865ce39b5f07eaa5c25c8bd7fb5533d7c0354b8d1537c7675e55a0ef"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_darwin_amd64.tar.gz"
+      sha256 "cb0f77c9457994a40f752d823812b5be8e3f3a009c07cc86b104f1ec7638c4ca"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_linux_arm64.tar.gz"
-      sha256 "ba1fd220e131b3c527de13e9c8387df2a9ee49afadd346e095ec19df23e54a73"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_linux_arm64.tar.gz"
+      sha256 "60f1fb9d5d9e59675819d81a2647ccee84ede74d07ba9ae8912b99dcee89e315"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.8/apogee_0.35.8_linux_amd64.tar.gz"
-      sha256 "7eefc008c4b6e708bad5b46a8b8066116f7a6e19bcad68f8aee394c663929824"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_linux_amd64.tar.gz"
+      sha256 "b8e25d65d64c0af4e7738704504dfaad7f402d6207cdb2aebf45af3a66d7f251"
     end
   end
 
