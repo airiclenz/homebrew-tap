@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.10"
+  version "0.35.11"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_darwin_arm64.tar.gz"
-      sha256 "55ed901b39d2f4a7820b1e53c02d1578cdcc76f0dc6b0d07df575067eb4f7edd"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_darwin_arm64.tar.gz"
+      sha256 "32ceadecd33d43e7799576e136c1252799f7339cc4c29dab52ba28ac39983a17"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_darwin_amd64.tar.gz"
-      sha256 "978a58af7a66636c3bf2517a36398f9137cf9fd1706b78629853ae43fe0c15d0"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_darwin_amd64.tar.gz"
+      sha256 "4d281fce9a69000a321873d42214a69974cc37679c0f7de36354714876cd18dd"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_linux_arm64.tar.gz"
-      sha256 "a035d49254ba4504de5e781e3c88d74805f8bf63faf592d539d0ba5e8089d267"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_linux_arm64.tar.gz"
+      sha256 "2674be1e9a88cfcfbb48ca6e1f286abb9b843a9e896ebd0a7ef0f87d5cd42e14"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_linux_amd64.tar.gz"
-      sha256 "c74ce0428cadff1bad5d281e1581b9afae54e3d26bd6a165a208366698de7070"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_linux_amd64.tar.gz"
+      sha256 "76681c8346cf7a601c423a863efdb17b17a1b66cb221421da2a0490ab284ca23"
     end
   end
 
