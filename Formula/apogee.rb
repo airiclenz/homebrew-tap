@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.9"
+  version "0.35.10"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_darwin_arm64.tar.gz"
-      sha256 "3b5bc5e5b9b8443a8552a0769421542a25cae650de580ca1eb588f66c5266090"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_darwin_arm64.tar.gz"
+      sha256 "55ed901b39d2f4a7820b1e53c02d1578cdcc76f0dc6b0d07df575067eb4f7edd"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_darwin_amd64.tar.gz"
-      sha256 "cb0f77c9457994a40f752d823812b5be8e3f3a009c07cc86b104f1ec7638c4ca"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_darwin_amd64.tar.gz"
+      sha256 "978a58af7a66636c3bf2517a36398f9137cf9fd1706b78629853ae43fe0c15d0"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_linux_arm64.tar.gz"
-      sha256 "60f1fb9d5d9e59675819d81a2647ccee84ede74d07ba9ae8912b99dcee89e315"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_linux_arm64.tar.gz"
+      sha256 "a035d49254ba4504de5e781e3c88d74805f8bf63faf592d539d0ba5e8089d267"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.9/apogee_0.35.9_linux_amd64.tar.gz"
-      sha256 "b8e25d65d64c0af4e7738704504dfaad7f402d6207cdb2aebf45af3a66d7f251"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.35.10/apogee_0.35.10_linux_amd64.tar.gz"
+      sha256 "c74ce0428cadff1bad5d281e1581b9afae54e3d26bd6a165a208366698de7070"
     end
   end
 
