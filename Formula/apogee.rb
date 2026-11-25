@@ -3,7 +3,7 @@
 class Apogee < Formula
   desc "Terminal coding agent built for smaller local models, better with bigger ones"
   homepage "https://github.com/airiclenz/apogee"
-  version "0.35.11"
+  version "0.36.0"
   license "MIT"
 
   # Installs the prebuilt binary for this platform rather than compiling, so no Go
@@ -12,23 +12,23 @@ class Apogee < Formula
   # `cmd/release dist` in the project repo.
   on_macos do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_darwin_arm64.tar.gz"
-      sha256 "32ceadecd33d43e7799576e136c1252799f7339cc4c29dab52ba28ac39983a17"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.36.0/apogee_0.36.0_darwin_arm64.tar.gz"
+      sha256 "4d81c7d4743315d66a348ae56e7790ec463d352c5310ccdda5a0e1518978bf5f"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_darwin_amd64.tar.gz"
-      sha256 "4d281fce9a69000a321873d42214a69974cc37679c0f7de36354714876cd18dd"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.36.0/apogee_0.36.0_darwin_amd64.tar.gz"
+      sha256 "4305f36f5a144d5f6e2bf50d27e1b49335c84fafdfd5f5f7cb07f3e33cd5a4ba"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_linux_arm64.tar.gz"
-      sha256 "2674be1e9a88cfcfbb48ca6e1f286abb9b843a9e896ebd0a7ef0f87d5cd42e14"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.36.0/apogee_0.36.0_linux_arm64.tar.gz"
+      sha256 "9cde72af562c3dbca9c7f96190d2ca4a3cff630734d18f91194cd7358adf8819"
     end
     on_intel do
-      url "https://github.com/airiclenz/apogee/releases/download/v0.35.11/apogee_0.35.11_linux_amd64.tar.gz"
-      sha256 "76681c8346cf7a601c423a863efdb17b17a1b66cb221421da2a0490ab284ca23"
+      url "https://github.com/airiclenz/apogee/releases/download/v0.36.0/apogee_0.36.0_linux_amd64.tar.gz"
+      sha256 "1cb0fae2ab0b635d8104497512d9b2a3ec366b13a04be47949830ae36099b9c9"
     end
   end
 
